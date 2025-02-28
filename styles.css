@@ -18,7 +18,7 @@ h1, h2 {
 }
 
 input {
-    width: 80%;
+    width: 70%;
     padding: 10px;
     margin: 5px;
     border: 1px solid #ccc;
@@ -45,4 +45,26 @@ button:hover {
 
 .calcular:hover {
     background-color: #0056b3;
+}
+
+/* Diseño de los gastos */
+.gasto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 5px;
+}
+
+.eliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.eliminar:hover {
+    background-color: darkred;
 }
