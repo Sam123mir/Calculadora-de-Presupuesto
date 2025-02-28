@@ -4,6 +4,7 @@ function agregarServicio() {
     div.innerHTML = `
         <input type="text" placeholder="Servicio (Ej: Internet)" class="nombre">
         <input type="number" placeholder="Monto" class="monto">
+        <button class="eliminar" onclick="eliminarGasto(this)">❌</button>
     `;
     document.getElementById("servicios").appendChild(div);
 }
@@ -14,8 +15,14 @@ function agregarGasto() {
     div.innerHTML = `
         <input type="text" placeholder="Gasto (Ej: Transporte)" class="nombre">
         <input type="number" placeholder="Monto" class="monto">
+        <button class="eliminar" onclick="eliminarGasto(this)">❌</button>
     `;
     document.getElementById("gastosApartes").appendChild(div);
+}
+
+function eliminarGasto(element) {
+    element.parentElement.remove();
+    calcular(); // Recalcular los montos después de eliminar un gasto
 }
 
 function calcular() {
